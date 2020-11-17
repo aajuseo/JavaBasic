@@ -36,7 +36,7 @@ public class SungJukV2b {
         char grd ;
         String fmt =
                 "이름 : %s\n국어 : %d\n영어 : %d\n"
-                + "수학 : %d\n합계 : %d\n평균 : %f\n"
+                + "수학 : %d\n합계 : %d\n평균 : %s\n"
                 + "학점 : %c";
         String result;
 
@@ -74,9 +74,11 @@ public class SungJukV2b {
         //9876543 /100 => 98765.43
         mean = Math.round(mean*100) / 100;
 
+        //String.valueOf(값)
+        //숫자를 문자로 변환
         result = String.format(
                 fmt, name, kor, eng, mat,
-                sum, mean, grd);
+                sum, String.valueOf(mean), grd);
 
         //결과출력
         // System.out.println("이름 : " + name );
@@ -102,7 +104,6 @@ public class SungJukV2b {
         // String 변수의 특성대문에 성능저하 발생
 
         System.out.println(result);
-
 
 
     }
