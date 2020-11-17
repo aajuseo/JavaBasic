@@ -18,40 +18,51 @@ package aajuseo;
  *
 
  */
-
+import java. util.Scanner;
 public class SungJukV2 {
     public static void main(String[] args) {
         //변수선언
         String name = "나연";
-        System.out.print("입력하세요.");
-        Scanner scanner = new Scanner(System.in);
-        num=scanner.nextInt();
-
-
         int kor = 99;
         int eng = 98;
         int mat = 99;
         int sum = 0;
         double mean = 0.0;
-        char grd;
+        char grd = '가';
 
         //처리
-        sum = kor + eng + mat;
-        //mean = (kor + eng + mat)/3;
-        mean = (double) sum/3;
+        //성적데이터를 키보드로 입력받기 위해
+        //Scanner 클래스 초기화
+        Scanner sc = new Scanner(System.in);
 
-        switch(mean) {
-            case mean>=90 : grd = '수';
-                break;
-            case mean>=80 : grd = '우';
-                break;
-            case mean>=70 : grd = '미';
-                break;
-            case mean>=60 : grd = '양';
-                break;
-            default:
-                            grd = '가';
+        //System.out.println("이름을 입력하세요 : "); ln으로 입력하면 줄바꿈이 발생함
+        System.out.print("이름을 입력하세요 : ");
+        name = sc.nextline();
+        System.out.print("국어 점수를 입력하세요 : ");
+        kor = sc.nextInt();
+        System.out.print("영어 점수를 입력하세요 : ");
+        eng = sc.nextInt();
+        System.out.print("수학 점수를 입력하세요 : ");
+        mat = sc.nextInt();
+
+
+        sum = kor + eng + mat;
+        mean = (double) sum/3;
+        //학점 계산은 switch문으로 처리
+        switch((int)(mean/10)) {
+            case 10:
+            case 9 : grd = '수'; break;
+            case 8 : grd = '우'; break;
+            case 7 : grd = '미'; break;
+            case 6 : grd = '양'; break;
+            case 6 : grd = '양'; break;
+            default : grd = '가';
+
         }
+
+        // String.format(형식지정자, 변수들)
+        mean = Double.parseDouble(
+                String.format("%.1f", mean);
 
         System.out.println("이름 :" + name );
         System.out.println("국어 :" + kor );
@@ -59,7 +70,7 @@ public class SungJukV2 {
         System.out.println("수학 :" + mat );
         System.out.println("------------");
         System.out.println("총점 :" + sum );
-        System.out.println("평균 :" + mean );
+        //System.out.printf("평균 : %.1f", mean );
         System.out.println("학점 :" + grd );
 
 
