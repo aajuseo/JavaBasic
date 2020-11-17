@@ -1,6 +1,8 @@
 package aajuseo;
 
 import java.util.Scanner;
+//ax+ bx+ cx => (a+b+c)x 배분법칙
+//반복문을 사용해서 이런식으로 코드 줄이기
 
 /**
  *  파일명 : SungJukV3
@@ -40,7 +42,9 @@ public class SungJukV3 {
 //처리
         Scanner sc = new Scanner(System.in);
 
-            System.out.println(num + "번째 학생 성적 입력중...");
+        for(int i = 1 ; i <= 3 ; ++i ){
+            System.out.println(i + "번째 학생 성적 입력중...");
+
             System.out.print("이름을 입력하세요 : ");
             name = sc.nextLine();
             System.out.print("국어 점수를 입력하세요 : ");
@@ -49,58 +53,6 @@ public class SungJukV3 {
             eng = sc.nextInt();
             System.out.print("수학 점수를 입력하세요 : ");
             mat = sc.nextInt();
-
-        sum = kor + eng + mat;
-        mean = (double) sum/3;
-
-        switch((int)(mean/10)) {
-            case 10:
-            case 9 : grd = '수'; break;
-            case 8 : grd = '우'; break;
-            case 7 : grd = '미'; break;
-            case 6 : grd = '양'; break;
-            default : grd = '가';
-
-        }
-
-            System.out.printf(fmt,
-                    name, kor, eng, mat, sum, mean, grd);
-
-        System.out.println(num + "번째 학생 성적 입력중...");
-        System.out.print("이름을 입력하세요 : ");
-        name = sc.nextLine();
-        System.out.print("국어 점수를 입력하세요 : ");
-        kor = sc.nextInt();
-        System.out.print("영어 점수를 입력하세요 : ");
-        eng = sc.nextInt();
-        System.out.print("수학 점수를 입력하세요 : ");
-        mat = sc.nextInt();
-
-        sum = kor + eng + mat;
-        mean = (double) sum/3;
-
-        switch((int)(mean/10)) {
-            case 10:
-            case 9 : grd = '수'; break;
-            case 8 : grd = '우'; break;
-            case 7 : grd = '미'; break;
-            case 6 : grd = '양'; break;
-            default : grd = '가';
-
-        }
-
-        System.out.printf(fmt,
-                name, kor, eng, mat, sum, mean, grd);
-
-        System.out.println(num + "번째 학생 성적 입력중...");
-        System.out.print("이름을 입력하세요 : ");
-        name = sc.nextLine();
-        System.out.print("국어 점수를 입력하세요 : ");
-        kor = sc.nextInt();
-        System.out.print("영어 점수를 입력하세요 : ");
-        eng = sc.nextInt();
-        System.out.print("수학 점수를 입력하세요 : ");
-        mat = sc.nextInt();
 
         sum = kor + eng + mat;
         mean = (double) sum/3;
