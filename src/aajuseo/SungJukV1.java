@@ -16,21 +16,28 @@ import javax.imageio.ImageTranscoder;
  *
  *  name, kor, eng, mat, sum, mean, grd
  *
+ *  삼항연산자 : (조건식) ? 참일때처리 : 거짓일때처리
  */
 
 public class SungJukV1 {
     public static void main(String[] args) {
-
+        //변수선언
+        String name = "나연";
         int kor = 99;
         int eng = 98;
         int mat = 99;
         int sum = 0;
         double mean = 0.0;
         char grd;
-        String name = "김나연";
 
+        //처리
         sum = kor + eng + mat;
-        mean = sum/3;
+        //mean = (kor + eng + mat)/3;
+        mean = (double) sum/3;
+        grd = (mean >=90) ? '수':
+              (mean >=80) ? '우':
+              (mean >=70) ? '미':
+              (mean >=60) ? '양': '가';
 
         System.out.println("이름 :" + name );
         System.out.println("국어 :" + kor );
@@ -39,21 +46,7 @@ public class SungJukV1 {
         System.out.println("------------");
         System.out.println("총점 :" + sum );
         System.out.println("평균 :" + mean );
+        System.out.println("학점 :" + grd );
 
-        if (mean >= 90) {
-            grd = '수';
-        }
-        else if (mean >= 80) {
-            grd = '우';
-        }
-        else if (mean >= 70) {
-            grd = '미';
-        } else if (mean >= 60) {
-            grd = '양';
-        }
-        else {
-            grd = '가';
-        }
-        System.out.println("학점은 \'" +  grd + "\' 입니다." );
     }
 }
