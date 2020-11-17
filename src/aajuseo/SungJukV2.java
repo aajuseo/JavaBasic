@@ -58,7 +58,7 @@ public class SungJukV2 {
             case 8 : grd = '우'; break;
             case 7 : grd = '미'; break;
             case 6 : grd = '양'; break;
-            case 6 : grd = '양'; break;
+            case 5 : grd = '양'; break;
             default : grd = '가';
 
         }
@@ -74,7 +74,7 @@ public class SungJukV2 {
         System.out.println("------------");
         System.out.println("총점 :" + sum );
         System.out.println("평균 : "+ mean);
-        //System.out.printf("평균 : %.1f", mean );
+
         System.out.println("학점 :" + grd );
 
 
