@@ -1,5 +1,7 @@
 package aajuseo;
 
+import java.util.Scanner;
+
 /**
  *  파일명 : SungJukV2
  *  작성일 : 2020.11.17
@@ -18,7 +20,7 @@ package aajuseo;
  *
 
  */
-import java. util.Scanner;
+
 public class SungJukV2 {
     public static void main(String[] args) {
         //변수선언
@@ -30,6 +32,7 @@ public class SungJukV2 {
         double mean = 0.0;
         char grd = '가';
 
+
         //처리
         //성적데이터를 키보드로 입력받기 위해
         //Scanner 클래스 초기화
@@ -37,7 +40,7 @@ public class SungJukV2 {
 
         //System.out.println("이름을 입력하세요 : "); ln으로 입력하면 줄바꿈이 발생함
         System.out.print("이름을 입력하세요 : ");
-        name = sc.nextline();
+        name = sc.nextLine();
         System.out.print("국어 점수를 입력하세요 : ");
         kor = sc.nextInt();
         System.out.print("영어 점수를 입력하세요 : ");
@@ -70,6 +73,7 @@ public class SungJukV2 {
         System.out.println("수학 :" + mat );
         System.out.println("------------");
         System.out.println("총점 :" + sum );
+        System.out.println("평균 : "+ mean);
         //System.out.printf("평균 : %.1f", mean );
         System.out.println("학점 :" + grd );
 
