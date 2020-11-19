@@ -37,7 +37,7 @@ public class SungJukV3 {
         char grd[] = new char[3] ;
 
         String fmt =
-                "이름 : %s\n국어 : %d\n영어 : %d\n수학 : %d\n합계 : %d\n평균 : %,.1f\n학점 : %c";
+                "이름 : %s\n국어 : %d\n영어 : %d\n수학 : %d\n합계 : %d\n평균 : %,.1f\n학점 : %c\n";
         String result;
 
 //처리
@@ -49,11 +49,18 @@ public class SungJukV3 {
                 System.out.print("이름을 입력하세요 : ");
                 name[i] = sc.nextLine();
                 System.out.print("국어 점수를 입력하세요 : ");
-                kor[i] = sc.nextInt();
+                kor[i] = Integer.parseInt(sc.nextLine());
                 System.out.print("영어 점수를 입력하세요 : ");
-                eng[i] = sc.nextInt();
+                eng[i] = Integer.parseInt(sc.nextLine());
                 System.out.print("수학 점수를 입력하세요 : ");
-                mat[i] = sc.nextInt();
+                mat[i] = Integer.parseInt(sc.nextLine());
+
+                //sc.skip("\r\n|[\n\r]");
+                // 수학 성적 입력 시 같이 입력된 enter키가
+                // 다음 데이터(이름) 입력 시 입력값으로
+                // 자동으로 전달됨
+                // 그러한 상황을 해결하기 위해
+                // 미리 엔터키를 제거하는 코드 삽입
             }
 
         for ( int i = 0 ; i < 3 ; ++i ) {

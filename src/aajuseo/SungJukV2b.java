@@ -72,7 +72,7 @@ public class SungJukV2b {
         //98765.4321 X 100 => 9876543.21
         //round(9876543.21) => 987654321
         //9876543 /100 => 98765.43
-        mean = Math.round(mean*100) / 100;
+        mean = Math.round(mean*100) / 100.0;
 
         //String.valueOf(값)
         //숫자를 문자로 변환

@@ -1,6 +1,7 @@
 package aajuseo;
 
 import javax.imageio.ImageTranscoder;
+import java.util.Scanner;
 
 /**
  *  파일명 : SungJukV1
@@ -47,6 +48,8 @@ public class SungJukV1 {
         System.out.println("총점 :" + sum );
         System.out.println("평균 :" + mean );
         System.out.println("학점 :" + grd );
+
+
 
     }
 }

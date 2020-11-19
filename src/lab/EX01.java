@@ -25,6 +25,8 @@ public class EX01 {
         //교수 클래스를 이용해서 객체 생성
         Professor prof = new Professor();
 
+        //기본 생성자를 이용해 값 출력
+
         //각 객체의 변수에 값 대입
         //학생
         kim.stdno = 201350050;
@@ -95,6 +97,12 @@ public class EX01 {
         prof.no = "301";
         prof.name = "이순신";
         prof.mjfield = "프로그래밍";
+
+        // 매개변수를 사용하는 생성자로 객체 생성
+        Student kim3 = new Student(201252110, "전지현",
+                "경기도의정부시", "1986.4.30", "의상디자인",
+                 445 );
+
 
         //객체에 저장된 값 출력
 

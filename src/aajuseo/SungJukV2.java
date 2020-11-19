@@ -63,9 +63,7 @@ public class SungJukV2 {
 
         }
 
-        // String.format(형식지정자, 변수들)
-        mean = Double.parseDouble(
-                String.format("%.1f", mean);
+
 
         System.out.println("이름 :" + name );
         System.out.println("국어 :" + kor );
